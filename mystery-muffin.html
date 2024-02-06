@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mystery Muffin Inquiry</title>
+<style>
+    body {
+        background-image: url('https://example.com/your-background-image.jpg'); /* Replace with your image URL */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #ffccd5;
+        font-family: 'Arial', sans-serif;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    div {
+        background-color: rgba(255, 204, 213, 0.8); /* Semi-transparent overlay for better readability */
+        padding: 20px;
+        border-radius: 15px;
+    }
+    input[type="radio"], input[type="button"] {
+        cursor: pointer;
+    }
+    input[type="button"] {
+        background-color: #d63384;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin: 20px 0;
+        font-size: 20px;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+<div>
+    <h2>❤️ Will you be my Valentine? ❤️</h2>
+    <form id="valentineForm">
+        <label for="yes" style="font-size: 20px; color: #d63384;">
+            <input type="radio" id="yes" name="valentine" value="Yes">
+            Yes ❤️
+        </label><br>
+        <label for="no" style="font-size: 20px; color: #d63384;">
+            <input type="radio" id="no" name="valentine" value="No">
+            No 💔
+        </label><br>
+        <input type="button" value="Submit" onclick="submitAnswer()">
+    </form>
+</div>
+<script>
+function submitAnswer() {
+    var yes = document.getElementById('yes').checked;
+    var no = document.getElementById('no').checked;
+    if (yes) {
+        alert('Yes & Absolutly Yes! ❤️');
+        // Here you would typically submit the form or redirect the user.
+        console.log('Form submitted');
+    } else if (no) {
+        // Display a funny dialog box if "No" is selected.
+        alert('You do not have an option! 😄');
+    } else {
+        alert('Please select an answer.');
+    }
+}
+</script>
+</body>
+</html>
